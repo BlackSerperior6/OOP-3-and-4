@@ -5,7 +5,6 @@ using namespace std;
 
 class Pair
 {
-
 private:
 	int First;
 	double Second;
@@ -28,10 +27,10 @@ public:
 		setSecond(second);
 	}
 
-	Pair(Pair *anotherPair) 
+	Pair(Pair& anotherPair) 
 	{
-		setFirst(anotherPair->getFirst());
-		setSecond(anotherPair->getSecond());
+		setFirst(anotherPair.getFirst());
+		setSecond(anotherPair.getSecond());
 	}
 
 	~Pair() {}

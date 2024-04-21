@@ -9,10 +9,10 @@ int main()
 	cout << "Введите первое и второе число первой пары" << endl;
 
 	Pair examle1;
-	cin >> examle1;
+	cin >> examle1; //Вводим данные в первый объект класса
 
 	Pair examle2;
-	Pair examle3 = examle2 = examle1;
+	Pair examle3 = examle2 = examle1; //Присваиваем объктам 2 и 3 значение объекта 1
 
 	cout << endl << examle3 << endl << examle2 << endl << examle1 << endl << endl;
 
@@ -36,7 +36,7 @@ int main()
 
 	cout << "Пара 2: " << examle2 << endl;
 
-	cout << "Присваиваем третьей паре знаечение суммы пары 1 + ранне сгенерированного случайного числа!" << endl;
+	cout << "Присваиваем третьей паре значение суммы пары 1 + раннее сгенерированного случайного числа!" << endl;
 
 	examle3 = examle1 + RandomNumber;
 

@@ -45,8 +45,8 @@ public:
 
 	Pair& operator += (double variable);
 
-	friend istream& operator >> (istream& stream, Pair& pair);
+	friend istream& operator >> (istream& stream, Pair& pair); //Добавление оператора ввода в друж. функции
 
-	friend ostream& operator << (ostream& stream, Pair& pair);
+	friend ostream& operator << (ostream& stream, Pair& pair); //Добавление оператора вывода в друж. функции
 };
 

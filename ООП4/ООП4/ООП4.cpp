@@ -11,15 +11,15 @@ int main()
 
 	cout << endl;
 
-	Person a;
+	Person a; 
 
-	cin >> a;
+	cin >> a; //Ввод данных в первого человека
 
-	cout << endl << a << endl;
+	cout << endl << a << endl; //Вывод
 
+	//Демонстрация работы метода присваивания для людей
 	Person b = a;
-
-	cout << b << endl << endl;
+	cout << b << endl << endl; 
 
 	Student c;
 
@@ -27,17 +27,20 @@ int main()
 
 	cin.ignore();
 
-	cin >> c;
+	cin >> c; //Ввод данных в первого студента
 
-	c.PrintBadNews();
+	cout << endl;
+	c.PrintBadNews(); //Вызов метода на печать сооб. о плохой оценке
 
-	cout << endl << c << endl << endl;
+	cout << endl << c << endl << endl; //Вывод студента
+	
+	cout << c.GetBasicPerson() << endl << endl; //Вывод его базового класса
 
+	//Демонстрация работы метода присваивания для студентов
 	Student e = c;
-
 	cout << endl << e << endl;
 
+	//Базовый класс может получить данные из наследника
 	b = e;
-
 	cout << b << endl << endl;
 }

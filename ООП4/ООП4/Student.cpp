@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-Student& Student::operator=(Student& anotherStudent)
+Student& Student::operator=(Student& anotherStudent) //Оператор присваивания
 {
 	Name = anotherStudent.Name;
 	Age = anotherStudent.Age;
@@ -12,6 +12,7 @@ Student& Student::operator=(Student& anotherStudent)
 	return *this;
 }
 
+//Потоковые ввод и вывод
 istream& operator>>(istream& stream, Student& student)
 {
 	cout << "Введите имя: "; getline(stream, student.Name);
@@ -27,5 +28,6 @@ istream& operator>>(istream& stream, Student& student)
 
 ostream& operator<<(ostream& stream, Student& student)
 {
-	return { stream << "Имя: " << student.Name << ", возраст: " << student.Age << ", предмет: " << student.SubjectName << ", оценка: " << student.Grade};
+	return { stream << "Имя: " << student.Name << ", возраст: " << student.Age << 
+		", предмет: " << student.SubjectName << ", оценка: " << student.Grade};
 }

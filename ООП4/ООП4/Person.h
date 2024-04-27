@@ -5,17 +5,18 @@
 
 using namespace std;
 
-class Person
+class Person //Базовый класс
 {
 protected:
-	string Name;
-	int Age;
+	string Name; //Имя
+	int Age; //Сколько лет
 
 public:
 
-	Person() { cout << "Активирован пустой конструктор базового класса: " << this <<endl; };
+	//Конструктор без параметров. Выводит адресс объекта класса
+	Person() { cout << "Активирован пустой конструктор базового класса: " << this << endl; };
 
-	Person(string name, int age) 
+	Person(string name, int age) //Конструктор с парамметрами
 	{
 		cout << "Активирован конструктор с параметрами: " << this << endl;
 
@@ -23,26 +24,27 @@ public:
 		setAge(age);
 	}
 
-	Person(Person& anotherPerson) 
+	Person(Person& anotherPerson) //Конструктор копирования 
 	{
 		setName(anotherPerson.getName());
 		setAge(anotherPerson.getAge());
 	}
 
-	~Person() { cout << "Активирован дизруктор базового класса: " << this << endl; };
+	//Диструктор. Выводит адресс уничтожаемого объекта
+	~Person() { cout << "Активирован диструктор базового класса: " << this << endl; };
 
-	void setName(string name){ Name = name; }
+	//Сеттеры
+	void setName(string name){ Name = name; } 
+	void setAge(int age) { Age = age; } 
 
-	void setAge(int age) { Age = age; }
-
+	//Геттеры
 	string getName() { return Name; }
-
 	int getAge() { return Age; }
 
-	Person& operator= (Person& anotherPerson);
+	Person& operator= (Person& anotherPerson); //Оператор присваивания
 
+	//Дружественные функции ввода - вывода
 	friend istream& operator>>(istream& stream, Person& person);
-
 	friend ostream& operator<<(ostream& stream, Person& person);
 };
 
